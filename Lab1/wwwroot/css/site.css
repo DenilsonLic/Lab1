@@ -22,6 +22,11 @@ body {
 }
 .form-controles{
     width: 466px;
-}.notas{
+}
+.notas {
     
- }
+}
+. nav-item {
+    background-color: black;
+    color: white;
+}
