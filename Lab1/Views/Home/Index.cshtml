@@ -12,7 +12,7 @@
     
   <thead>
     <tr>
-      <th scope="col">Nombre</th>
+      <!--<th scope="col">Nombre</th> -->
       <th scope="col">Nota Lab1 </th>
       <th scope="col">Nota Lab2</th>
       <th scope="col">Nota Lab3</th>
@@ -22,19 +22,17 @@
       <th scope="col">Promedio</th>
       </thead>
       <tr>
-         <td>@ViewBag.l1</td> 
-         <td>@ViewBag.l2</td> 
-         <td>@ViewBag.l3</td> 
-         <td>@ViewBag.p1</td> 
-         <td>@ViewBag.p2</td> 
-         <td>@ViewBag.p3</td> 
-         <td>@ViewBag.promf</td>
-         
+         <td>@ViewBag.Lab1</td> 
+         <td>@ViewBag.Lab2</td> 
+         <td>@ViewBag.Lab3</td> 
+         <td>@ViewBag.Par1</td> 
+         <td>@ViewBag.Par2</td> 
+         <td>@ViewBag.Par3</td> 
+         <td>@ViewBag.Prom</td>
       </tr>
-  
   </table>
-<br />
-<br />
+<br/>
+<br/>
 
 <form asp-controller="Home" asp-action="Index">
     <div class="notas">

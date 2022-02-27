@@ -1,4 +1,5 @@
-﻿using Lab1.Models;
+﻿using Lab1.BusinessLogic;
+using Lab1.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -15,16 +16,17 @@ namespace Lab1.Controllers
 
         public IActionResult Index(ActionNotas notas)
         {
-            ViewBag.l1 = notas.Lab1;
-            ViewBag.l2 = notas.Lab2;
-            ViewBag.l3 = notas.Lab3;
-            ViewBag.p1 = notas.Par1;
-            ViewBag.p2 = notas.Par2;
-            ViewBag.p3 = notas.Par3;
-            Double promLab = ((notas.Lab1+notas.Lab2+notas.Lab3)/3)*0.40;
-            Double promPar = ((notas.Par1+notas.Par2+notas.Par3)/3)*0.60;
-            Double promFinal= promLab + promPar;
-            ViewBag.promf = promFinal;
+            OperacionesNotas op = new OperacionesNotas();
+            Double Laboratorios = op.SumaLab(notas);
+            Double Paraciales = op.SumaPar(notas);
+            Double Promedio = op.Prom(notas);
+            ViewBag.Lab1 = notas.Lab1;
+            ViewBag.Lab2 = notas.Lab2;
+            ViewBag.Lab3 = notas.Lab3;
+            ViewBag.Par1 = notas.Par1;
+            ViewBag.Par2 = notas.Par2;
+            ViewBag.Par3 = notas.Par3;
+            ViewBag.Prom = notas.Prom;
             return View();
         }
         
