@@ -5,6 +5,11 @@ namespace Lab1.BusinessLogic
 {
     public class OperacionesNotas : IoperacionesNotas
     {
+        public string NombreCompleto(ActionNotas action)
+        {
+            return action.Nombre;
+        }
+
         public double PorcLab(ActionNotas action)
         {
             return action.TotalLab * 0.40;

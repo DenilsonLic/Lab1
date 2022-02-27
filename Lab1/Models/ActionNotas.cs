@@ -2,6 +2,7 @@ namespace Lab1.Models
 {
     public class ActionNotas
     {
+        public string Nombre {get; set;}
         public double Lab1 {get; set;}
         public double Lab2 {get; set;}
         public double Lab3 {get; set;}

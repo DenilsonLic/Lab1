@@ -12,7 +12,7 @@
     
   <thead>
     <tr>
-      <!--<th scope="col">Nombre</th> -->
+      <th scope="col">Nombre</th>
       <th scope="col">Nota Lab1 </th>
       <th scope="col">Nota Lab2</th>
       <th scope="col">Nota Lab3</th>
@@ -22,6 +22,7 @@
       <th scope="col">Promedio</th>
       </thead>
       <tr>
+        <td>@ViewBag.Nombre</td>
          <td>@ViewBag.Lab1</td> 
          <td>@ViewBag.Lab2</td> 
          <td>@ViewBag.Lab3</td> 
@@ -38,7 +39,7 @@
     <div class="notas">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Ingrese su nombre : </label>
-    <input type="text" class="form-controles">
+    <input type="text" class="form-controles" asp-for="Nombre">
     
   </div>
    <div class="mb-3">

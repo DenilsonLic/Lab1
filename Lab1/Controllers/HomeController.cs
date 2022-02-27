@@ -20,6 +20,7 @@ namespace Lab1.Controllers
             Double Laboratorios = op.SumaLab(notas);
             Double Paraciales = op.SumaPar(notas);
             Double Promedio = op.Prom(notas);
+            ViewBag.Nombre = notas.Nombre;
             ViewBag.Lab1 = notas.Lab1;
             ViewBag.Lab2 = notas.Lab2;
             ViewBag.Lab3 = notas.Lab3;
