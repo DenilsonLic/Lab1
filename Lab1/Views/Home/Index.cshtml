@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Lab1.Models.ActionNotas
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -35,43 +36,43 @@
 <br />
 <br />
 
-<form>
+<form asp-controller="Home" asp-action="Index">
     <div class="notas">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Ingrese su nombre : </label>
-    <input type="text" class="form-controles" 
+    <input type="text" class="form-controles">
     
   </div>
    <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Ingrese la  primera nota del laboratorio </label>
-    <input type="text" class="form-control" 
+    <input type="text" class="form-control" asp-for="Lab1">
     
   </div>
 
    <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Ingrese la  segunda nota del laboratorio </label>
-    <input type="text" class="form-control" 
+    <input type="text" class="form-control" asp-for="Lab2">
     
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Ingrese la tercera nota del laboratorio </label>
-    <input type="text" class="form-control" 
+    <input type="text" class="form-control" asp-for="Lab3">
    
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Ingrese la  primera nota del Parcial </label>
-    <input type="text" class="form-control" 
+    <input type="text" class="form-control" asp-for="Par1">
   </div>
   
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Ingrese la segunda nota del Parcial </label>
-    <input type="text" class="form-control"
+    <input type="text" class="form-control" asp-for="Par2">
    
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Ingrese la segunda nota del Parcial </label>
     
-    <input type="text" class="form-control" 
+    <input type="text" class="form-control" asp-for="Par3">
   </div>
     <br />
   <button type="submit" class="btn btn-primary">Submit</button>

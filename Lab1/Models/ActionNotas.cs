@@ -8,5 +8,8 @@ namespace Lab1.Models
         public double Par1 {get; set;}
         public double Par2 {get; set;}
         public double Par3 {get; set;}
+        public double TotalLab {get; set;}
+        public double TotalParc {get; set;}
+        public double Prom { get; set; }
     }
 }
